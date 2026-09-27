@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this portfolio reconstruction, please cite it as below."
+title: "Botanical Knowledge Ontology: Knowledge Engineering & Semantic AI"
+type: software
+authors:
+  - family-names: Abedin
+    given-names: Minhajul
+version: 1.0.0
+date-released: 2026-09-28
+license: MIT
+repository-code: "https://github.com/minhajul-abedin-ai/botanical-knowledge-ontology"
+keywords:
+  - ontology
+  - knowledge engineering
+  - semantic web
+  - OWL
+  - Protégé
+  - botanical knowledge
+  - neuro-symbolic AI

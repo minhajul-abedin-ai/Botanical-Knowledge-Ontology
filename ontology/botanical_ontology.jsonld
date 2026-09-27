@@ -1,0 +1,1348 @@
+[
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "RootVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasGrowthHabit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasGrowthHabit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#GrowthHabit"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#HighProteinCrop",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Portfolio helper class for assignment-described >2g protein query result."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "HighProteinCrop"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "VitaminARichCrop"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminK",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "VitaminK"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SweetPotato_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Sweet potato"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminA": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "LegumeVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminK",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasVitaminK"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminC",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasVitaminC"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasFlower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasFlower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Flower"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#GrowthHabit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "GrowthHabit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Bean_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bean"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SimpleLeaf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SimpleLeaf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalKnowledgeOntology",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Minhajul Abedin"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Portfolio reconstruction of a botanical knowledge-engineering assignment, extended with reproducible RDF/OWL tooling."
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Botanical Knowledge Ontology"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MonocotSeed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "MonocotSeed"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasTaste",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasTaste"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#proteinPer100g",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "proteinPer100g"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tuber",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Tuber"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carrot_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Carrot"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#growthTimeDays": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 70
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasColor": [
+      {
+        "@value": "Orange"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CarrotTapRoot"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminA": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "isPartOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Portfolio helper class for assignment-described fast-growing query results."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "FastGrowingCrop"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fat",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Fat"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Flower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Flower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminA",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasVitaminA"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Root"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "DicotSeed"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#usedInCuisine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "usedInCuisine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BulbVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "BulbVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Leaf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Lettuce_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Lettuce"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#usedInCuisine": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Spinach_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#HighProteinCrop",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Spinach"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SpinachLeaf"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminA": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#usedInCuisine": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tomato_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Tomato"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit"
+      },
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CruciferousVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "CruciferousVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#growthTimeDays",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "growthTimeDays"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#fatPer100g",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "fatPer100g"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Stem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Stem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Macronutrient"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Salad"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Seed"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminC",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "VitaminC"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pumpkin_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pumpkin"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#growthTimeDays": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 90
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pea_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pea"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Micronutrient"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fruit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Fruit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasOrigin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasOrigin"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "LeafyVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BellPepper_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bell pepper"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Beetroot_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Beetroot"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Tomato seed"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Kale_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Kale"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPod",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasPod"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pod"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CarrotTapRoot",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TapRoot"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Carrot taproot"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carrot_ind"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fruit"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Tomato fruit"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tomato_ind"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasColor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasColor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#caloriesPer100g",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "caloriesPer100g"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Radish_ind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Radish"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#growthTimeDays": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 25
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PlantPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pod",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pod"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Cuisine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carbohydrate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Carbohydrate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Portfolio helper class for assignment-described biofortification scenario."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "MaturesUnder120Days"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Protein",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Protein"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Nutrient"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CompoundLeaf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "CompoundLeaf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SpinachLeaf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Spinach leaf"
+      }
+    ],
+    "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Spinach_ind"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#carbPer100g",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "carbPer100g"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminA",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "VitaminA"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "FruitVegetable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TapRoot",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TapRoot"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FibrousRoot",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "FibrousRoot"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root"
+      }
+    ]
+  },
+  {
+    "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Plant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Plant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+PREFIX bot: <https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?wholeLabel ?partLabel
+WHERE {
+  ?whole bot:hasPart ?part ; rdfs:label ?wholeLabel .
+  ?part rdfs:label ?partLabel .
+}
+ORDER BY ?wholeLabel ?partLabel

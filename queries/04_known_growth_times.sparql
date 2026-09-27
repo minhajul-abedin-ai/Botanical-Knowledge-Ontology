@@ -1,0 +1,8 @@
+PREFIX bot: <https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?crop ?label ?days
+WHERE {
+  ?crop bot:growthTimeDays ?days ; rdfs:label ?label .
+}
+ORDER BY ?days

@@ -1,0 +1,356 @@
+@prefix bot: <https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bot:Bean_ind a owl:NamedIndividual,
+        bot:FastGrowingCrop,
+        bot:LegumeVegetable ;
+    rdfs:label "Bean" .
+
+bot:Beetroot_ind a owl:NamedIndividual,
+        bot:FastGrowingCrop,
+        bot:RootVegetable ;
+    rdfs:label "Beetroot" .
+
+bot:BellPepper_ind a owl:NamedIndividual,
+        bot:FruitVegetable ;
+    rdfs:label "Bell pepper" .
+
+bot:BotanicalKnowledgeOntology a owl:Ontology ;
+    dcterms:creator "Minhajul Abedin" ;
+    dcterms:description "Portfolio reconstruction of a botanical knowledge-engineering assignment, extended with reproducible RDF/OWL tooling." ;
+    dcterms:title "Botanical Knowledge Ontology" ;
+    owl:versionInfo "1.0.0" .
+
+bot:BulbVegetable a owl:Class ;
+    rdfs:label "BulbVegetable" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Carbohydrate a owl:Class ;
+    rdfs:label "Carbohydrate" ;
+    rdfs:subClassOf bot:Macronutrient .
+
+bot:CompoundLeaf a owl:Class ;
+    rdfs:label "CompoundLeaf" ;
+    rdfs:subClassOf bot:Leaf .
+
+bot:CruciferousVegetable a owl:Class ;
+    rdfs:label "CruciferousVegetable" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Fat a owl:Class ;
+    rdfs:label "Fat" ;
+    rdfs:subClassOf bot:Macronutrient .
+
+bot:FibrousRoot a owl:Class ;
+    rdfs:label "FibrousRoot" ;
+    rdfs:subClassOf bot:Root .
+
+bot:Kale_ind a owl:NamedIndividual,
+        bot:LeafyVegetable ;
+    rdfs:label "Kale" .
+
+bot:Lettuce_ind a owl:NamedIndividual,
+        bot:LeafyVegetable ;
+    rdfs:label "Lettuce" ;
+    bot:usedInCuisine bot:Salad .
+
+bot:MonocotSeed a owl:Class ;
+    rdfs:label "MonocotSeed" ;
+    rdfs:subClassOf bot:Seed ;
+    owl:disjointWith bot:DicotSeed .
+
+bot:Pea_ind a owl:NamedIndividual,
+        bot:LegumeVegetable ;
+    rdfs:label "Pea" .
+
+bot:Plant a owl:Class ;
+    rdfs:label "Plant" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+
+bot:Protein a owl:Class ;
+    rdfs:label "Protein" ;
+    rdfs:subClassOf bot:Macronutrient .
+
+bot:Pumpkin_ind a owl:NamedIndividual,
+        bot:FruitVegetable,
+        bot:MaturesUnder120Days ;
+    rdfs:label "Pumpkin" ;
+    bot:growthTimeDays 90 .
+
+bot:Radish_ind a owl:NamedIndividual,
+        bot:FastGrowingCrop,
+        bot:RootVegetable ;
+    rdfs:label "Radish" ;
+    bot:growthTimeDays 25 .
+
+bot:SimpleLeaf a owl:Class ;
+    rdfs:label "SimpleLeaf" ;
+    rdfs:subClassOf bot:Leaf .
+
+bot:Stem a owl:Class ;
+    rdfs:label "Stem" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:SweetPotato_ind a owl:NamedIndividual,
+        bot:MaturesUnder120Days,
+        bot:RootVegetable,
+        bot:VitaminARichCrop ;
+    rdfs:label "Sweet potato" ;
+    bot:hasVitaminA true .
+
+bot:Tuber a owl:Class ;
+    rdfs:label "Tuber" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:VitaminA a owl:Class ;
+    rdfs:label "VitaminA" ;
+    rdfs:subClassOf bot:Micronutrient .
+
+bot:VitaminC a owl:Class ;
+    rdfs:label "VitaminC" ;
+    rdfs:subClassOf bot:Micronutrient .
+
+bot:VitaminK a owl:Class ;
+    rdfs:label "VitaminK" ;
+    rdfs:subClassOf bot:Micronutrient .
+
+bot:caloriesPer100g a owl:DatatypeProperty ;
+    rdfs:label "caloriesPer100g" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:integer .
+
+bot:carbPer100g a owl:DatatypeProperty ;
+    rdfs:label "carbPer100g" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:decimal .
+
+bot:fatPer100g a owl:DatatypeProperty ;
+    rdfs:label "fatPer100g" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:decimal .
+
+bot:growthTimeDays a owl:DatatypeProperty ;
+    rdfs:label "growthTimeDays" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:integer .
+
+bot:hasColor a owl:DatatypeProperty ;
+    rdfs:label "hasColor" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:string .
+
+bot:hasFlower a owl:ObjectProperty ;
+    rdfs:label "hasFlower" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range bot:Flower .
+
+bot:hasGrowthHabit a owl:ObjectProperty ;
+    rdfs:label "hasGrowthHabit" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range bot:GrowthHabit .
+
+bot:hasOrigin a owl:DatatypeProperty ;
+    rdfs:label "hasOrigin" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:string .
+
+bot:hasPod a owl:ObjectProperty ;
+    rdfs:label "hasPod" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range bot:Pod .
+
+bot:hasTaste a owl:DatatypeProperty ;
+    rdfs:label "hasTaste" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:string .
+
+bot:hasVitaminA a owl:DatatypeProperty ;
+    rdfs:label "hasVitaminA" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:boolean .
+
+bot:hasVitaminC a owl:DatatypeProperty ;
+    rdfs:label "hasVitaminC" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:boolean .
+
+bot:hasVitaminK a owl:DatatypeProperty ;
+    rdfs:label "hasVitaminK" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:boolean .
+
+bot:proteinPer100g a owl:DatatypeProperty ;
+    rdfs:label "proteinPer100g" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range xsd:decimal .
+
+bot:usedInCuisine a owl:ObjectProperty ;
+    rdfs:label "usedInCuisine" ;
+    rdfs:domain bot:Vegetable ;
+    rdfs:range bot:Cuisine .
+
+bot:CarrotTapRoot a owl:NamedIndividual,
+        bot:TapRoot ;
+    rdfs:label "Carrot taproot" ;
+    bot:isPartOf bot:Carrot_ind .
+
+bot:Carrot_ind a owl:NamedIndividual,
+        bot:MaturesUnder120Days,
+        bot:RootVegetable,
+        bot:VitaminARichCrop ;
+    rdfs:label "Carrot" ;
+    bot:growthTimeDays 70 ;
+    bot:hasColor "Orange" ;
+    bot:hasPart bot:CarrotTapRoot ;
+    bot:hasVitaminA true .
+
+bot:Flower a owl:Class ;
+    rdfs:label "Flower" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:Fruit a owl:Class ;
+    rdfs:label "Fruit" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:GrowthHabit a owl:Class ;
+    rdfs:label "GrowthHabit" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+
+bot:HighProteinCrop a owl:Class ;
+    rdfs:label "HighProteinCrop" ;
+    rdfs:comment "Portfolio helper class for assignment-described >2g protein query result." ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Pod a owl:Class ;
+    rdfs:label "Pod" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:SpinachLeaf a owl:NamedIndividual,
+        bot:Leaf ;
+    rdfs:label "Spinach leaf" ;
+    bot:isPartOf bot:Spinach_ind .
+
+bot:Spinach_ind a owl:NamedIndividual,
+        bot:FastGrowingCrop,
+        bot:HighProteinCrop,
+        bot:LeafyVegetable ;
+    rdfs:label "Spinach" ;
+    bot:hasPart bot:SpinachLeaf ;
+    bot:hasVitaminA true ;
+    bot:usedInCuisine bot:Salad .
+
+bot:TapRoot a owl:Class ;
+    rdfs:label "TapRoot" ;
+    rdfs:subClassOf bot:Root .
+
+bot:Tomato_ind a owl:NamedIndividual,
+        bot:FruitVegetable ;
+    rdfs:label "Tomato" ;
+    bot:hasPart bot:TomatoFruit,
+        bot:TomatoSeed .
+
+bot:hasPart a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "hasPart" ;
+    rdfs:domain bot:BotanicalEntity ;
+    rdfs:range bot:PlantPart ;
+    owl:inverseOf bot:isPartOf .
+
+bot:isPartOf a owl:ObjectProperty ;
+    rdfs:label "isPartOf" ;
+    rdfs:domain bot:PlantPart ;
+    rdfs:range bot:BotanicalEntity ;
+    owl:inverseOf bot:hasPart .
+
+bot:Cuisine a owl:Class ;
+    rdfs:label "Cuisine" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+
+bot:DicotSeed a owl:Class ;
+    rdfs:label "DicotSeed" ;
+    rdfs:subClassOf bot:Seed .
+
+bot:LegumeVegetable a owl:Class ;
+    rdfs:label "LegumeVegetable" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Nutrient a owl:Class ;
+    rdfs:label "Nutrient" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+
+bot:Root a owl:Class ;
+    rdfs:label "Root" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:Salad a owl:NamedIndividual,
+        bot:Cuisine ;
+    rdfs:label "Salad" .
+
+bot:Seed a owl:Class ;
+    rdfs:label "Seed" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:TomatoFruit a owl:NamedIndividual,
+        bot:Fruit ;
+    rdfs:label "Tomato fruit" ;
+    bot:hasPart bot:TomatoSeed ;
+    bot:isPartOf bot:Tomato_ind .
+
+bot:TomatoSeed a owl:NamedIndividual,
+        bot:DicotSeed ;
+    rdfs:label "Tomato seed" ;
+    bot:isPartOf bot:TomatoFruit .
+
+bot:VitaminARichCrop a owl:Class ;
+    rdfs:label "VitaminARichCrop" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:FruitVegetable a owl:Class ;
+    rdfs:label "FruitVegetable" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Leaf a owl:Class ;
+    rdfs:label "Leaf" ;
+    rdfs:subClassOf bot:PlantPart .
+
+bot:Macronutrient a owl:Class ;
+    rdfs:label "Macronutrient" ;
+    rdfs:subClassOf bot:Nutrient .
+
+bot:MaturesUnder120Days a owl:Class ;
+    rdfs:label "MaturesUnder120Days" ;
+    rdfs:comment "Portfolio helper class for assignment-described biofortification scenario." ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:Micronutrient a owl:Class ;
+    rdfs:label "Micronutrient" ;
+    rdfs:subClassOf bot:Nutrient .
+
+bot:FastGrowingCrop a owl:Class ;
+    rdfs:label "FastGrowingCrop" ;
+    rdfs:comment "Portfolio helper class for assignment-described fast-growing query results." ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:LeafyVegetable a owl:Class ;
+    rdfs:label "LeafyVegetable" ;
+    rdfs:subClassOf bot:Vegetable .
+
+bot:RootVegetable a owl:Class ;
+    rdfs:label "RootVegetable" ;
+    rdfs:subClassOf bot:Vegetable ;
+    owl:disjointWith bot:LeafyVegetable .
+
+bot:BotanicalEntity a owl:Class ;
+    rdfs:label "BotanicalEntity" .
+
+bot:PlantPart a owl:Class ;
+    rdfs:label "PlantPart" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+
+bot:Vegetable a owl:Class ;
+    rdfs:label "Vegetable" ;
+    rdfs:subClassOf bot:BotanicalEntity .
+

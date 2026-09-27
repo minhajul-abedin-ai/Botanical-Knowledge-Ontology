@@ -1,0 +1,10 @@
+PREFIX bot: <https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?crop ?label
+WHERE {
+  ?crop a bot:RootVegetable ;
+        bot:hasVitaminA true ;
+        <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+}
+ORDER BY ?label

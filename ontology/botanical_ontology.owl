@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bot="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed"/>
+    <rdfs:label>Tomato seed</rdfs:label>
+    <bot:isPartOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>LegumeVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CarrotTapRoot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TapRoot"/>
+    <rdfs:label>Carrot taproot</rdfs:label>
+    <bot:isPartOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carrot_ind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fruit"/>
+    <rdfs:label>Tomato fruit</rdfs:label>
+    <bot:isPartOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tomato_ind"/>
+    <bot:hasPart rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminK">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VitaminK</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Kale_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"/>
+    <rdfs:label>Kale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tomato_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable"/>
+    <rdfs:label>Tomato</rdfs:label>
+    <bot:hasPart rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoFruit"/>
+    <bot:hasPart rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TomatoSeed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SweetPotato_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"/>
+    <rdfs:label>Sweet potato</rdfs:label>
+    <bot:hasVitaminA rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bot:hasVitaminA>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Cuisine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VitaminA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Protein">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Protein</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Leaf</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminK">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasVitaminK</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carrot_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"/>
+    <rdfs:label>Carrot</rdfs:label>
+    <bot:hasColor>Orange</bot:hasColor>
+    <bot:growthTimeDays rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</bot:growthTimeDays>
+    <bot:hasVitaminA rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bot:hasVitaminA>
+    <bot:hasPart rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CarrotTapRoot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Spinach_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#HighProteinCrop"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"/>
+    <rdfs:label>Spinach</rdfs:label>
+    <bot:hasVitaminA rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bot:hasVitaminA>
+    <bot:hasPart rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SpinachLeaf"/>
+    <bot:usedInCuisine rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Seed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasTaste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasTaste</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasColor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasColor</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#TapRoot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TapRoot</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SimpleLeaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SimpleLeaf</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasVitaminC</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>DicotSeed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CompoundLeaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CompoundLeaf</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Bean_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"/>
+    <rdfs:label>Bean</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Root</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Vegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine"/>
+    <rdfs:label>Salad</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Radish_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"/>
+    <rdfs:label>Radish</rdfs:label>
+    <bot:growthTimeDays rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</bot:growthTimeDays>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasPod</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Plant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Plant</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Lettuce_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"/>
+    <rdfs:label>Lettuce</rdfs:label>
+    <bot:usedInCuisine rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Salad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalKnowledgeOntology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title>Botanical Knowledge Ontology</dcterms:title>
+    <dcterms:creator>Minhajul Abedin</dcterms:creator>
+    <dcterms:description>Portfolio reconstruction of a botanical knowledge-engineering assignment, extended with reproducible RDF/OWL tooling.</dcterms:description>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#caloriesPer100g">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>caloriesPer100g</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#usedInCuisine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>usedInCuisine</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Cuisine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>isPartOf</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+    <owl:inverseOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Beetroot_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop"/>
+    <rdfs:label>Beetroot</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>LeafyVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#CruciferousVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CruciferousVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VitaminC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasFlower">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasFlower</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Flower"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#growthTimeDays">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>growthTimeDays</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MonocotSeed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>MonocotSeed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Seed"/>
+    <owl:disjointWith rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#DicotSeed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>PlantPart</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BellPepper_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable"/>
+    <rdfs:label>Bell pepper</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#GrowthHabit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>GrowthHabit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label>hasPart</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+    <owl:inverseOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#isPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Stem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Stem</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>FruitVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FastGrowingCrop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>FastGrowingCrop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:comment>Portfolio helper class for assignment-described fast-growing query results.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#VitaminARichCrop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VitaminARichCrop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BulbVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>BulbVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Pod</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#carbPer100g">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>carbPer100g</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pumpkin_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FruitVegetable"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days"/>
+    <rdfs:label>Pumpkin</rdfs:label>
+    <bot:growthTimeDays rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</bot:growthTimeDays>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Fat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#SpinachLeaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Leaf"/>
+    <rdfs:label>Spinach leaf</rdfs:label>
+    <bot:isPartOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Spinach_ind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Macronutrient</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasOrigin</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#MaturesUnder120Days">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>MaturesUnder120Days</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:comment>Portfolio helper class for assignment-described biofortification scenario.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasGrowthHabit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasGrowthHabit</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#GrowthHabit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#hasVitaminA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasVitaminA</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>BotanicalEntity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Nutrient</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#BotanicalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Tuber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Tuber</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Fruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Fruit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#fatPer100g">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>fatPer100g</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Carbohydrate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Carbohydrate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Macronutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#RootVegetable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RootVegetable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <owl:disjointWith rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LeafyVegetable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Flower">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Flower</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#proteinPer100g">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>proteinPer100g</rdfs:label>
+    <rdfs:domain rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Micronutrient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Micronutrient</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Nutrient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#FibrousRoot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>FibrousRoot</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#HighProteinCrop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>HighProteinCrop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Vegetable"/>
+    <rdfs:comment>Portfolio helper class for assignment-described &gt;2g protein query result.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#Pea_ind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://minhajul-abedin-ai.github.io/botanical-knowledge-ontology#LegumeVegetable"/>
+    <rdfs:label>Pea</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
