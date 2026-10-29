@@ -8,6 +8,14 @@ A reproducible portfolio reconstruction of an MSc Knowledge Engineering project 
 
 ![Portfolio reconstruction architecture](assets/project_architecture.png)
 
+## Explore the knowledge graph
+
+**Start with the ontology:** [Open in Protégé](#open-in-protégé), run the [SPARQL query examples](#competency-query-examples), and see [Validate](#validate) for reproducibility checks.
+
+**Want to trace the evidence?** The [assignment traceability notes](docs/ASSIGNMENT_TRACEABILITY.md) distinguish reconstructed project content from explicitly documented coursework facts. This is **not** a claim that the original Protégé file or a production LLM system is included.
+
+For more projects using Python, AI and applied ML, see the [author's GitHub profile](https://github.com/minhajul-abedin-ai).
+
 ## Why this project?
 
 Botanical data is often split across taxonomic, agricultural and nutritional sources. The original assignment explored how an ontology can bridge those knowledge silos so that machines can reason across concepts such as plant structure, growth time and nutrition.
