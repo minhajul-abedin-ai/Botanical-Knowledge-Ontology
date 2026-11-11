@@ -24,7 +24,7 @@ def answer(graph, question):
     """Answer only supported single-crop questions; never infer absent facts."""
     q = question.casefold().strip()
     matches = [(name, uri) for name, uri in _entities(graph).items()
-               if re.search(r"(?<!\\w)" + re.escape(name) + r"(?!\\w)", q)]
+               if re.search(r"(?<!\w)" + re.escape(name) + r"(?!\w)", q)]
     if len(matches) != 1:
         return {"status": "unsupported", "answer": "Name exactly one known crop.", "evidence": []}
     _, subject = matches[0]
