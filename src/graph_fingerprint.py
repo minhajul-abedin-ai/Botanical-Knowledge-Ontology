@@ -2,6 +2,7 @@
 import argparse
 import json
 from pathlib import Path
+import rdflib
 from rdflib import Graph
 from rdflib.compare import to_isomorphic
 
@@ -9,7 +10,8 @@ from rdflib.compare import to_isomorphic
 def fingerprint(path: Path) -> dict:
     graph = Graph()
     graph.parse(path, format="turtle")
-    return {"algorithm": "rdflib-isomorphic-sha256", "triple_count": len(graph),
+    return {"algorithm": "rdflib-isomorphic-sha256", "rdflib_version": rdflib.__version__,
+            "triple_count": len(graph),
             "digest": str(to_isomorphic(graph).graph_digest())}
 
 
