@@ -1,3 +1,4 @@
+import rdflib
 from pathlib import Path
 from src.graph_fingerprint import fingerprint
 
@@ -51,3 +52,11 @@ _:a ex:value "one" ; ex:next _:a .
 _:b ex:value "two" .
 ''')
     assert fingerprint(a)["digest"] != fingerprint(b)["digest"]
+
+
+def test_fingerprint_records_installed_rdflib_version(tmp_path: Path):
+    path = tmp_path / "graph.ttl"
+    path.write_text('<urn:s> <urn:p> <urn:o> .')
+    result = fingerprint(path)
+    assert result["rdflib_version"] == rdflib.__version__
+    assert result["triple_count"] == 1
