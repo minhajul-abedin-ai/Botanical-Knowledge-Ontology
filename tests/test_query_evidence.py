@@ -40,3 +40,15 @@ def test_invalid_limits(limit):
 def test_reject_non_select():
     with pytest.raises(ValueError):
         evidence_for_query(sample(), "CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }")
+
+
+def test_non_select_is_rejected_before_graph_execution():
+    class GuardedGraph:
+        def query(self, _query):
+            raise AssertionError("Non-SELECT query must not be executed")
+
+    with pytest.raises(ValueError, match="Only SPARQL SELECT"):
+        evidence_for_query(
+            GuardedGraph(),
+            "CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }",
+        )
