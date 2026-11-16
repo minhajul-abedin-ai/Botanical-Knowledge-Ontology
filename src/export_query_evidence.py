@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from rdflib import Graph
+from rdflib.plugins.sparql.parser import parseQuery
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -11,9 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 def evidence_for_query(graph: Graph, query_text: str, *, max_rows: int = 20) -> dict:
     if max_rows < 1 or max_rows > 100:
         raise ValueError("max_rows must be between 1 and 100")
+    # Parse and reject non-SELECT forms before evaluating them against the graph.
+    # This is a query-form check, not a sandbox for untrusted SPARQL.
+    parsed = parseQuery(query_text)
+    if parsed[1].name != "SelectQuery":
+        raise ValueError("Only SPARQL SELECT queries are supported")
     result = graph.query(query_text)
-    if result.type != "SELECT":
-        raise ValueError("Only read-only SPARQL SELECT queries are supported")
     columns = [str(v) for v in result.vars]
     rows = []
     truncated = False
