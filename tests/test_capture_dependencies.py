@@ -53,3 +53,13 @@ def test_cli_emits_valid_json_with_installed_versions():
     assert set(payload["packages"]) == set(module.DIRECT_DEPENDENCIES)
     for name in module.DIRECT_DEPENDENCIES:
         assert payload["packages"][name] == module.importlib.metadata.version(name)
+
+
+def test_cli_main_missing_dependency_returns_error_without_json(capsys):
+    """A failed capture must not emit misleading JSON to stdout."""
+    with patch.object(module, "capture", side_effect=RuntimeError("Required dependency not installed: rdflib")):
+        status = module.main()
+    output = capsys.readouterr()
+    assert status == 1
+    assert output.out == ""
+    assert "Required dependency not installed: rdflib" in output.err
