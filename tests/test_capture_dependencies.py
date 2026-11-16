@@ -31,3 +31,25 @@ def test_missing_dependency_fails_closed():
     ):
         with pytest.raises(RuntimeError, match="Required dependency not installed: rdflib"):
             module.capture()
+
+
+def test_cli_emits_valid_json_with_installed_versions():
+    """Exercise the actual command, not just the imported capture function."""
+    import json
+    import subprocess
+    import sys
+
+    completed = subprocess.run(
+        [sys.executable, str(MODULE_PATH)],
+        capture_output=True,
+        text=True,
+        check=True,
+        timeout=30,
+    )
+    assert completed.stderr == ""
+    payload = json.loads(completed.stdout)
+    assert payload["python_version"] == module.platform.python_version()
+    assert payload["python_implementation"] == module.platform.python_implementation()
+    assert set(payload["packages"]) == set(module.DIRECT_DEPENDENCIES)
+    for name in module.DIRECT_DEPENDENCIES:
+        assert payload["packages"][name] == module.importlib.metadata.version(name)
