@@ -13,6 +13,8 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r requirements.txt
+      - name: Verify installed dependency compatibility
+        run: python -m pip check
       - name: Record RDFLib version for fingerprint reproducibility
         run: python -c "import rdflib; print('RDFLib version:', rdflib.__version__)"
       - run: python src/build_ontology.py
