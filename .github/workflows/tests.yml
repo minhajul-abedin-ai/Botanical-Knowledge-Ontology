@@ -41,3 +41,39 @@ jobs:
           path: dependency-environment.json
           if-no-files-found: error
           retention-days: 14
+
+  clean-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Create isolated environment and install observed direct versions
+        run: |
+          python -m venv .replay-venv
+          .replay-venv/bin/python -m pip install 'rdflib==7.6.0' 'networkx==3.6.1' 'matplotlib==3.11.2' 'pytest==8.4.2'
+      - name: Verify replay, tests, and captured versions
+        run: |
+          .replay-venv/bin/python -m pip check
+          .replay-venv/bin/python src/build_ontology.py
+          .replay-venv/bin/python src/validate_ontology.py
+          .replay-venv/bin/python -m pytest -q
+          .replay-venv/bin/python scripts/capture_dependencies.py > replay-dependency-environment.json
+          .replay-venv/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+          observed = json.loads(Path("replay-dependency-environment.json").read_text())
+          expected = {"rdflib": "7.6.0", "networkx": "3.6.1", "matplotlib": "3.11.2", "pytest": "8.4.2"}
+          assert observed["python_implementation"] == "CPython"
+          assert observed["python_version"].startswith("3.11.")
+          assert observed["packages"] == expected, (observed["packages"], expected)
+          print("Clean replay direct dependency versions match archived CI observations")
+          PY
+      - name: Archive clean replay environment
+        uses: actions/upload-artifact@v4
+        with:
+          name: clean-replay-dependency-environment
+          path: replay-dependency-environment.json
+          if-no-files-found: error
+          retention-days: 14
