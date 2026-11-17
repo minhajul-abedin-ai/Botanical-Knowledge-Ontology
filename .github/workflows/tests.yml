@@ -34,11 +34,22 @@ jobs:
           assert all(isinstance(version, str) and version for version in data["packages"].values())
           print("Dependency environment JSON validated")
           PY
+      - name: Capture complete installed package inventory
+        run: |
+          python -m pip freeze --all > dependency-freeze.txt
+          python - <<'PY'
+          from pathlib import Path
+          lines = Path("dependency-freeze.txt").read_text(encoding="utf-8").splitlines()
+          assert lines and all(line.strip() for line in lines)
+          print(f"Captured {len(lines)} installed package records")
+          PY
       - name: Archive dependency environment
         uses: actions/upload-artifact@v4
         with:
           name: dependency-environment
-          path: dependency-environment.json
+          path: |
+            dependency-environment.json
+            dependency-freeze.txt
           if-no-files-found: error
           retention-days: 14
 
@@ -70,10 +81,21 @@ jobs:
           assert observed["packages"] == expected, (observed["packages"], expected)
           print("Clean replay direct dependency versions match archived CI observations")
           PY
+      - name: Capture complete clean replay package inventory
+        run: |
+          .replay-venv/bin/python -m pip freeze --all > replay-dependency-freeze.txt
+          .replay-venv/bin/python - <<'PY'
+          from pathlib import Path
+          lines = Path("replay-dependency-freeze.txt").read_text(encoding="utf-8").splitlines()
+          assert lines and all(line.strip() for line in lines)
+          print(f"Captured {len(lines)} clean replay package records")
+          PY
       - name: Archive clean replay environment
         uses: actions/upload-artifact@v4
         with:
           name: clean-replay-dependency-environment
-          path: replay-dependency-environment.json
+          path: |
+            replay-dependency-environment.json
+            replay-dependency-freeze.txt
           if-no-files-found: error
           retention-days: 14
