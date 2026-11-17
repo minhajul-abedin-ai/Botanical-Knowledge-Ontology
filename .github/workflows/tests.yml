@@ -102,3 +102,25 @@ jobs:
             replay-dependency-freeze.txt
           if-no-files-found: error
           retention-days: 14
+
+  compare-dependency-inventories:
+    name: Compare installed package inventories
+    runs-on: ubuntu-latest
+    needs: [test, clean-replay]
+    steps:
+      - uses: actions/checkout@v5
+      - name: Download standard CI inventory
+        uses: actions/download-artifact@v4
+        with:
+          name: dependency-environment
+          path: artifacts/standard
+      - name: Download clean replay inventory
+        uses: actions/download-artifact@v4
+        with:
+          name: clean-replay-dependency-environment
+          path: artifacts/replay
+      - name: Fail on installed distribution version differences
+        run: |
+          python scripts/compare_dependency_freezes.py \
+            artifacts/standard/dependency-freeze.txt \
+            artifacts/replay/replay-dependency-freeze.txt
