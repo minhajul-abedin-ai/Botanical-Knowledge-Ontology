@@ -18,3 +18,24 @@ jobs:
       - run: python src/build_ontology.py
       - run: python src/validate_ontology.py
       - run: pytest -q
+      - name: Capture and validate dependency environment JSON
+        run: |
+          python scripts/capture_dependencies.py > dependency-environment.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("dependency-environment.json").read_text(encoding="utf-8"))
+          assert isinstance(data["python_version"], str) and data["python_version"]
+          assert data["python_implementation"] == "CPython"
+          assert set(data["packages"]) == {"rdflib", "networkx", "matplotlib", "pytest"}
+          assert all(isinstance(version, str) and version for version in data["packages"].values())
+          print("Dependency environment JSON validated")
+          PY
+      - name: Archive dependency environment
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-environment
+          path: dependency-environment.json
+          if-no-files-found: error
+          retention-days: 14
