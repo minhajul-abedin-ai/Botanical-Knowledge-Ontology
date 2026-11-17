@@ -12,9 +12,93 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - run: pip install -r requirements.txt
+      - name: Pin pip for reproducible environment inventories
+        run: python -m pip install --upgrade 'pip==26.3'
+      - run: python -m pip install -r requirements.txt
+      - name: Verify installed dependency compatibility
+        run: python -m pip check
       - name: Record RDFLib version for fingerprint reproducibility
         run: python -c "import rdflib; print('RDFLib version:', rdflib.__version__)"
       - run: python src/build_ontology.py
       - run: python src/validate_ontology.py
       - run: pytest -q
+      - name: Capture and validate dependency environment JSON
+        run: |
+          python scripts/capture_dependencies.py > dependency-environment.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("dependency-environment.json").read_text(encoding="utf-8"))
+          assert isinstance(data["python_version"], str) and data["python_version"]
+          assert data["python_implementation"] == "CPython"
+          assert set(data["packages"]) == {"rdflib", "networkx", "matplotlib", "pytest"}
+          assert all(isinstance(version, str) and version for version in data["packages"].values())
+          print("Dependency environment JSON validated")
+          PY
+      - name: Capture complete installed package inventory
+        run: |
+          python -m pip freeze --all > dependency-freeze.txt
+          python - <<'PY'
+          from pathlib import Path
+          lines = Path("dependency-freeze.txt").read_text(encoding="utf-8").splitlines()
+          assert lines and all(line.strip() for line in lines)
+          print(f"Captured {len(lines)} installed package records")
+          PY
+      - name: Archive dependency environment
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-environment
+          path: |
+            dependency-environment.json
+            dependency-freeze.txt
+          if-no-files-found: error
+          retention-days: 14
+
+  clean-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Create isolated environment and install observed direct versions
+        run: |
+          python -m venv .replay-venv
+          .replay-venv/bin/python -m pip install --upgrade 'pip==26.3'
+          .replay-venv/bin/python -m pip install 'rdflib==7.6.0' 'networkx==3.6.1' 'matplotlib==3.11.2' 'pytest==8.4.2'
+      - name: Verify replay, tests, and captured versions
+        run: |
+          .replay-venv/bin/python -m pip check
+          .replay-venv/bin/python src/build_ontology.py
+          .replay-venv/bin/python src/validate_ontology.py
+          .replay-venv/bin/python -m pytest -q
+          .replay-venv/bin/python scripts/capture_dependencies.py > replay-dependency-environment.json
+          .replay-venv/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+          observed = json.loads(Path("replay-dependency-environment.json").read_text())
+          expected = {"rdflib": "7.6.0", "networkx": "3.6.1", "matplotlib": "3.11.2", "pytest": "8.4.2"}
+          assert observed["python_implementation"] == "CPython"
+          assert observed["python_version"].startswith("3.11.")
+          assert observed["packages"] == expected, (observed["packages"], expected)
+          print("Clean replay direct dependency versions match archived CI observations")
+          PY
+      - name: Capture complete clean replay package inventory
+        run: |
+          .replay-venv/bin/python -m pip freeze --all > replay-dependency-freeze.txt
+          .replay-venv/bin/python - <<'PY'
+          from pathlib import Path
+          lines = Path("replay-dependency-freeze.txt").read_text(encoding="utf-8").splitlines()
+          assert lines and all(line.strip() for line in lines)
+          print(f"Captured {len(lines)} clean replay package records")
+          PY
+      - name: Archive clean replay environment
+        uses: actions/upload-artifact@v4
+        with:
+          name: clean-replay-dependency-environment
+          path: |
+            replay-dependency-environment.json
+            replay-dependency-freeze.txt
+          if-no-files-found: error
+          retention-days: 14
