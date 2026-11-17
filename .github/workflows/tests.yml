@@ -12,7 +12,9 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - run: pip install -r requirements.txt
+      - name: Pin pip for reproducible environment inventories
+        run: python -m pip install --upgrade 'pip==26.3'
+      - run: python -m pip install -r requirements.txt
       - name: Verify installed dependency compatibility
         run: python -m pip check
       - name: Record RDFLib version for fingerprint reproducibility
@@ -63,6 +65,7 @@ jobs:
       - name: Create isolated environment and install observed direct versions
         run: |
           python -m venv .replay-venv
+          .replay-venv/bin/python -m pip install --upgrade 'pip==26.3'
           .replay-venv/bin/python -m pip install 'rdflib==7.6.0' 'networkx==3.6.1' 'matplotlib==3.11.2' 'pytest==8.4.2'
       - name: Verify replay, tests, and captured versions
         run: |
