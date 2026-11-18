@@ -1,0 +1,42 @@
+name: RDFLib fingerprint compatibility
+
+on:
+  push:
+    paths:
+      - '.github/workflows/rdflib-fingerprint-matrix.yml'
+      - 'src/graph_fingerprint.py'
+      - 'tests/test_fingerprint_digest_canary.py'
+      - 'requirements.txt'
+  pull_request:
+    paths:
+      - '.github/workflows/rdflib-fingerprint-matrix.yml'
+      - 'src/graph_fingerprint.py'
+      - 'tests/test_fingerprint_digest_canary.py'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+jobs:
+  digest-canary:
+    name: RDFLib ${{ matrix.rdflib }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        rdflib: ['7.5.0', '7.6.0']
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Install test dependencies and selected RDFLib
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "rdflib==${{ matrix.rdflib }}"
+          python -m pip check
+      - name: Verify exact RDFLib version
+        env:
+          EXPECTED_RDFLIB: ${{ matrix.rdflib }}
+        run: |
+          python -c "import os, rdflib; assert rdflib.__version__ == os.environ['EXPECTED_RDFLIB'], (rdflib.__version__, os.environ['EXPECTED_RDFLIB']); print('RDFLib:', rdflib.__version__)"
+      - name: Run persisted digest compatibility canaries
+        run: python -m pytest -q tests/test_fingerprint_digest_canary.py
