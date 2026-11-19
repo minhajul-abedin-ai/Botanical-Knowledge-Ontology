@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+# Tests only read repository content; do not grant a write-capable token.
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
