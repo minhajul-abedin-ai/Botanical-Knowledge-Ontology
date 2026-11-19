@@ -15,6 +15,10 @@ on:
       - 'requirements.txt'
   workflow_dispatch:
 
+# This test-only workflow needs repository read access, not write privileges.
+permissions:
+  contents: read
+
 jobs:
   digest-canary:
     name: RDFLib ${{ matrix.rdflib }}
