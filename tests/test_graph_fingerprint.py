@@ -51,3 +51,19 @@ _:a ex:value "one" ; ex:next _:a .
 _:b ex:value "two" .
 ''')
     assert fingerprint(a)["digest"] != fingerprint(b)["digest"]
+
+
+def test_relative_iris_resolve_against_file_location(tmp_path: Path):
+    """Identical relative-IRI Turtle bytes need not represent identical graphs."""
+    first = tmp_path / "first" / "graph.ttl"
+    second = tmp_path / "second" / "graph.ttl"
+    first.parent.mkdir()
+    second.parent.mkdir()
+    turtle = '<subject> <predicate> <object> .'
+    first.write_text(turtle, encoding="utf-8")
+    second.write_text(turtle, encoding="utf-8")
+
+    assert first.read_bytes() == second.read_bytes()
+    assert fingerprint(first)["triple_count"] == 1
+    assert fingerprint(second)["triple_count"] == 1
+    assert fingerprint(first)["digest"] != fingerprint(second)["digest"]
