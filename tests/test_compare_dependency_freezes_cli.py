@@ -72,3 +72,21 @@ def test_cli_rejects_duplicate_or_empty_inventory(tmp_path, standard, replay, ex
 
     assert result.returncode == 1
     assert expected_output in result.stdout + result.stderr
+
+
+def test_cli_rejects_missing_inventory_file(tmp_path):
+    """A missing input must fail closed rather than silently compare empty data."""
+    missing = tmp_path / "does-not-exist.txt"
+    replay = tmp_path / "replay.txt"
+    replay.write_text("example==1.0\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), str(missing), str(replay)],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 1
+    assert "Cannot compare inventories:" in result.stderr
+    assert "does-not-exist.txt" in result.stderr
