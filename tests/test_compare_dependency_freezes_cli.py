@@ -48,3 +48,27 @@ def test_cli_accepts_equivalent_inventories(tmp_path):
 
     assert result.returncode == 0
     assert "Installed distribution names and versions match" in result.stdout
+
+
+@pytest.mark.parametrize(
+    ("standard", "replay", "expected_output"),
+    [
+        ("example==1.0\nExample==2.0\n", "example==1.0\n", "duplicate distribution: example"),
+        ("# no packages\n", "example==1.0\n", "no installed distributions found"),
+    ],
+)
+def test_cli_rejects_duplicate_or_empty_inventory(tmp_path, standard, replay, expected_output):
+    left = tmp_path / "standard.txt"
+    right = tmp_path / "replay.txt"
+    left.write_text(standard, encoding="utf-8")
+    right.write_text(replay, encoding="utf-8")
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), str(left), str(right)],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 1
+    assert expected_output in result.stdout + result.stderr
